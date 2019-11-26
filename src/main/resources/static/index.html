@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hello WebSocket</title>
+<link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="/custom.css" rel="stylesheet">
+<script src="/webjars/jquery/3.1.0/jquery.min.js"></script>
+<script src="/webjars/sockjs-client/sockjs.min.js"></script>
+<script src="/webjars/stomp-websocket/stomp.min.js"></script>
+<script src="/app.js"></script>
+</head>
+<body>
+
+	<div id="main-content" class="container-fluid">
+		<div class="row">
+			<div class="col-md-12"
+				style="background-color: #3f51b5; padding: 1% 47%;">
+				<form class="form-inline">
+					<div class="form-group">
+						<h2 for="connect" style="color: #fff;">Qual5</h2>
+					</div>
+				</form>
+			</div>
+			<div class="col-md-12" style="padding: 2% 17%;">
+				<form class="form-inline">
+					<div class="form-group mx-sm-3 mb-2">
+						<input type="text" id="ipaddress" class="form-control"
+							placeholder="Your ipAddress here...">
+					</div>
+					<div class="form-group mx-sm-3 mb-2">
+						<input type="text" id="port" class="form-control"
+							placeholder="Your port here...">
+					</div>
+					<div class="form-group mx-sm-3 mb-2">
+						<input type="text" id="topic" class="form-control"
+							placeholder="Your topic here...">
+					</div>
+					<button id="connect-mqtt" class="btn btn-primary mx-sm-1 mb-2" type="submit">Connect</button>
+					<button id="disconnect-mqtt" class="btn btn-danger mx-sm-1 mb-2" type="submit">Disconnect</button>
+				</form>
+			</div>
+		</div>
+		<div class="row" style="padding-top: 2%">
+			<div class="col-md-12 table-wrapper-scroll-y my-custom-scrollbar">
+				<table id="conversation" class="table table-striped">
+					<thead>
+						<tr>
+							<th>Entry & Exit Info</th>
+						</tr>
+					</thead>
+					<tbody id="deviceinfo">
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
